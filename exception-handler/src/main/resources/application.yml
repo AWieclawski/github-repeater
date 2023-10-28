@@ -1,0 +1,15 @@
+# spring context variables
+server:
+  port: 5555
+spring:
+  application:
+    name: exception-handler
+  messages:
+    basename: exceptions
+# copy this to deployed application resources
+api:
+  time:
+    url: http://worldtimeapi.org/api/timezone
+    zone: Europe/Warsaw
+httpError:
+  codeFieldName: errorCode

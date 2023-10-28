@@ -1,0 +1,39 @@
+# spring context variables
+server:
+  port: 3333
+spring:
+  application:
+    name: repeater
+  messages:
+    basename: exceptions
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          reactive:
+            function:
+              client:
+                ExchangeFunctions: TRACE
+    edu:
+      awieclawski:
+        github:
+          webclient:
+            GithubClient: WARN
+# customized project variables (may be in /etc/environment)
+github:
+  url: https://api.github.com
+  token: ${TMP_GITHUB_TOKEN}
+webclient:
+  wiretap:
+    enabled: true
+base:
+  error:
+    msg: GitHub Repeater issue
+# imported exception-handler module variables
+api:
+  time:
+    url: http://worldtimeapi.org/api/timezone
+    zone: Europe/Warsaw
+httpError:
+  codeFieldName: errorCode
