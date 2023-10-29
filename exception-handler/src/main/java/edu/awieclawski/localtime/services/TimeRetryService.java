@@ -10,7 +10,7 @@ import java.time.Instant;
 
 public interface TimeRetryService {
 
-    @Retryable(retryFor = ServiceUnavailableException.class,
+    @Retryable(value = ServiceUnavailableException.class,
             maxAttempts = 2, // standard value = 3
             backoff = @Backoff(delay = 1000))
     Instant getRegionalTime();

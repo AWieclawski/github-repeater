@@ -13,8 +13,4 @@ public class RemoteTimeRestMapper {
         return Instant.ofEpochSecond(timestampDto.getUnixtime());
     }
 
-    public Instant toMillis(TimestampDto timestampDto) {
-        return Instant.ofEpochMilli(timestampDto.getUnixtime());
-    }
-
 }
